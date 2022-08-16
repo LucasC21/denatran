@@ -1,4 +1,4 @@
-package br.edu.ifms.denatran.Repository;
+package br.edu.ifms.denatran.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

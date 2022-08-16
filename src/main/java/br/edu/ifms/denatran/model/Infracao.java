@@ -29,7 +29,6 @@ public class Infracao implements Serializable {
 		
 	}
 	
-	
 	public Infracao(Integer id, String descricao, Integer pontos, Double valor) {
 		super();
 		this.id = id;
@@ -37,7 +36,6 @@ public class Infracao implements Serializable {
 		this.pontos = pontos;
 		this.valor = valor;
 	}
-
 
 	public Integer getId() {
 		return id;
@@ -75,11 +73,9 @@ public class Infracao implements Serializable {
 		return multas;
 	}
 
-
 	public void setMultas(List<Multa> multas) {
 		this.multas = multas;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -97,7 +93,5 @@ public class Infracao implements Serializable {
 		Infracao other = (Infracao) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 	
 }
