@@ -68,6 +68,14 @@ public class Carro implements Serializable {
 		this.placa = placa;
 	}
 
+	public List<Multa> getMultas() {
+		return multas;
+	}
+
+	public void setMultas(List<Multa> multas) {
+		this.multas = multas;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

@@ -35,7 +35,7 @@ public class Multa implements Serializable {
 	
 	}
 
-	public Multa(Integer id, String cidade, int ano, Carro carro, Infracao infracao) {
+	public Multa(Integer id, String cidade, Carro carro,  int ano, Infracao infracao) {
 		super();
 		this.id = id;
 		this.cidade = cidade;

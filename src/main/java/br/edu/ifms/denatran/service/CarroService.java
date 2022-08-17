@@ -37,7 +37,6 @@ public class CarroService {
 	}
 
 	public void delete(Integer id) {
-		// TODO Auto-generated method stub
 		buscarPorId(id);
 		try {
 			repo.deleteById(id);	
