@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import br.edu.ifms.denatran.dto.InfracaoDto;
 import br.edu.ifms.denatran.model.Infracao;
 import br.edu.ifms.denatran.repository.InfracaoRepository;
 import br.edu.ifms.denatran.service.exception.DataIntegrityException;
@@ -27,7 +28,6 @@ public class InfracaoService {
 	public Infracao insert (Infracao obj) {
 		obj.setId(null);
 		return infraRepo.save(obj);
-		
 	}
 
 	public Infracao update(Infracao obj) {
@@ -48,6 +48,10 @@ public class InfracaoService {
 
 	public List<Infracao> findAll() {
 		return infraRepo.findAll();
+	}
+	
+	public Infracao fromDto(InfracaoDto objDto) {
+		return new Infracao(objDto.getId(), objDto.getDescricao(), objDto.getPontos(), objDto.getValor());
 	}
 	
 	private void updateData(Infracao newObj, Infracao obj) {

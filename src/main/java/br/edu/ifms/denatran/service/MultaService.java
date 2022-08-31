@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import br.edu.ifms.denatran.dto.MultaDto;
 import br.edu.ifms.denatran.model.Multa;
 import br.edu.ifms.denatran.repository.MultaRepository;
 import br.edu.ifms.denatran.service.exception.DataIntegrityException;
@@ -47,6 +48,10 @@ public class MultaService {
 
 	public List<Multa> findAll() {
 		return multaRepo.findAll();
+	}
+	
+	public Multa fromDto(MultaDto objDto) {
+		return new Multa(objDto.getId(), objDto.getCidade(), null, objDto.getAno(), null);
 	}
 	
 	private void updateData(Multa newObj, Multa obj) {
